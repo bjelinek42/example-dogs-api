@@ -1,0 +1,30 @@
+### Users create (signup)
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "New User",
+  "email": "user@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+### Sessions create (login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "password"
+}
+
+###
+POST http://localhost:3000/dogs
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDc5ODAzMTV9.gxxtflAMA8boCFZ-RV9EVz4S7aFkV3RtiYlbozzdYDM
+content-type: application/json
+
+{
+  "name": "Howie",
+  "age": 4,
+  "breed": "Bichon Frise"
+}
